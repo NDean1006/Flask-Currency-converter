@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
     <title>Currency Exchange</title>
 </head>
 <body>
+    {% for msg in get_flashed_messages() %}
+            <p>{{ msg }}</p>
+    {% endfor %}
     <form action="/exchange" method="POST">
-        <lable for="form">Converting From</lable>
-        <input type="text" name="form" >
-        <lable for="to">Converting To</lable>
-        <input type="text" name="to" >
-        <lable for="Amount">Amount</lable>
-        <input type="text" name="Amount">
-
+        <p>
+            <lable for="form">Converting From</lable>
+            <input type="text" name="form" >
+        </p>
+        <p>
+            <lable for="to">Converting To</lable>
+            <input type="text" name="to" >
+        </p>
+        <p>
+            <lable for="Amount">Amount</lable>
+            <input type="text" name="Amount">
+        </p>
         <button>Convert</button>
 
-    </form>
-    
+    </form>    
 </body>
 </html>
