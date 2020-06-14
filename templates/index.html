@@ -10,18 +10,18 @@
     {% for msg in get_flashed_messages() %}
             <p>{{ msg }}</p>
     {% endfor %}
-    <form action="/exchange" method="POST">
+    <form action="/convert">
         <p>
             <lable for="form">Converting From</lable>
-            <input type="text" name="form" >
+            <input type="text" name="from" >
         </p>
         <p>
             <lable for="to">Converting To</lable>
             <input type="text" name="to" >
         </p>
         <p>
-            <lable for="Amount">Amount</lable>
-            <input type="text" name="Amount">
+            <lable for="amount">Amount</lable>
+            <input type="text" name="amount">
         </p>
         <button>Convert</button>
 
